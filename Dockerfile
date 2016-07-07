@@ -35,8 +35,7 @@ RUN mkdir /openvas-src && \
     make install && \
     make rebuild_cache && \
 
-    ldconfig && \
-    openvas-mkcert -q
+    ldconfig
 
 EXPOSE 9391
 
