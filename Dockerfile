@@ -7,7 +7,7 @@ RUN apt-get update -y && \
   apt-get install -y --no-install-recommends --fix-missing \
   pkg-config libssh-dev libgnutls28-dev libglib2.0-dev libpcap-dev \
   libgpgme11-dev uuid-dev bison libksba-dev libhiredis-dev libsnmp-dev \
-  wget cmake build-essential libgcrypt-dev libldap2-dev doxygen \
+  rsync wget cmake build-essential libgcrypt-dev libldap2-dev doxygen \
   openssl net-tools nmap && \
   rm -rf /var/lib/apt/lists/*
 
