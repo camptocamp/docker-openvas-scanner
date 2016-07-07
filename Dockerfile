@@ -41,7 +41,7 @@ EXPOSE 9391
 
 COPY docker-entrypoint.sh /
 
-VOLUME [ "/usr/local/var/lib/openvas/plugins", "/usr/local/var/cache/openvas" ]
+VOLUME [ "/usr/local/var/lib/openvas", "/usr/local/var/cache/openvas" ]
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD [ "--help" ]
