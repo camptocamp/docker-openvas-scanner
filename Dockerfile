@@ -13,6 +13,7 @@ RUN apt-get update -y && \
 
 RUN mkdir /openvas-src && \
 
+    # Building openvas-libraries
     cd /openvas-src && \
     wget -nv http://wald.intevation.org/frs/download.php/2291/openvas-libraries-${OPENVAS_LIBRARIES_VERSION}.tar.gz && \
     tar zxvf openvas-libraries-${OPENVAS_LIBRARIES_VERSION}.tar.gz && \
@@ -24,6 +25,7 @@ RUN mkdir /openvas-src && \
     make install && \
     make rebuild_cache && \
 
+    # Building openvas-scanner
     cd /openvas-src && \
     wget -nv http://wald.intevation.org/frs/download.php/2266/openvas-scanner-${OPENVAS_SCANNER_VERSION}.tar.gz && \
     tar zxvf openvas-scanner-${OPENVAS_SCANNER_VERSION}.tar.gz && \
